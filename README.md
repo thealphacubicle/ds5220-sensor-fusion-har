@@ -15,7 +15,7 @@ An experimental project for the DS5220 course using the UCI Human Activity Recog
 3. The training scripts expect processed parquet files under `data/processed/`. If they are missing, `main.py` will automatically
    download the raw UCI HAR dataset, remove any overlapping `subject` ids between the train and test splits to avoid leakage,
    and save cleaned `train.parquet` and `test.parquet` files. You can also run the preprocessing manually with
-   `python src/utils/preprocess.py`.
+   `python src/utils/preprocess.py`. These parquet files will not be tracked due to large size, but they are necessary for training.
 
 ### Configuration
 
@@ -39,6 +39,7 @@ The training pipeline includes the following classical machine learning models:
 
    ```
    WANDB_API_KEY=your-key
+    WANDB_ENTITY=your-entity  # Optional, defaults to your W&B username
    ```
 
 2. Start the experiment:
