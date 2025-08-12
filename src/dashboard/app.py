@@ -84,16 +84,18 @@ def load_run_data() -> pd.DataFrame:
 def main() -> None:
     st.set_page_config(page_title="Sensor Fusion HAR Dashboard", layout="wide")
     st.title("Sensor Fusion HAR Dashboard")
+    st.markdown("### Authored By: Srihari Raman")
     st.write(
-        "Interactive overview of sensor fusion models trained on wearable"
+        "This dashboard offers an interactive overview of sensor fusion models trained on wearable"
         " sensor data for human activity recognition. Metrics are sourced"
         " from Weights & Biases runs or local CSV logs."
     )
 
-    df = load_run_data()
-    if df.empty:
-        st.info("No run data available.")
-        return
+    with st.spinner("Loading run data..."):
+        df = load_run_data()
+        if df.empty:
+            st.info("No run data available.")
+            return
 
     models = df["model"].dropna().unique().tolist()
     sensors = df["sensor_config"].dropna().unique().tolist()
