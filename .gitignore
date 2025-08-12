@@ -1,0 +1,88 @@
+# ========================
+# Python cache and bytecode
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ========================
+# Environment files
+# ========================
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+*.env
+
+# ========================
+# macOS and system files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Logs and debug
+# ========================
+*.log
+*.out
+*.err
+
+# ========================
+# Python packaging
+# ========================
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ========================
+# Jupyter and notebooks
+# ========================
+.ipynb_checkpoints
+*.ipynb
+!analysis.ipynb
+
+# ========================
+# IDE / Editor folders
+# ========================
+.vscode/
+.idea/
+*.swp
+
+# ========================
+# Test / coverage files
+# ========================
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# ========================
+# Data folders (DO NOT TRACK)
+# ========================
+/data/processed/
+/data/raw/
+/outputs/
+/wandb/
+
+# ========================
+# Model files and large binaries
+# ========================
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.ckpt
+
+# ========================
+# Temporary or scratch
+# ========================
+tmp/
+temp/
+*.tmp

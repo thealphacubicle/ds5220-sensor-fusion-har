@@ -1,0 +1,56 @@
+models:
+  logistic_ovr:
+    class: LogisticRegressionModel
+    enabled: True
+    params:
+      max_iter: 1000
+      multi_class: 'ovr'
+      random_state: 42
+
+  logistic_multinomial:
+    class: LogisticRegressionModel
+    enabled: True
+    params:
+      max_iter: 1000
+      multi_class: 'multinomial'
+      solver: 'lbfgs'
+      random_state: 42
+
+  knn:
+    class: KNNModel
+    enabled: True
+    params:
+      n_neighbors: 5
+
+  svm:
+    class: SVMModel
+    enabled: True
+    params:
+      C: 1.0
+      kernel: 'rbf'
+      gamma: 'scale'
+
+  random_forest_classifier:
+    class: RandomForestClassifier
+    enabled: True
+    params:
+      n_estimators: 100
+      max_depth: 10
+      random_state: 42
+
+  extra_trees_classifier:
+    class: ExtraTreesClassifier
+    enabled: True
+    params:
+      n_estimators: 100
+      max_depth: 10
+      random_state: 42
+
+  naive_bayes:
+    class: GaussianNBModel
+    enabled: True
+
+sensors:
+  - accel
+  - gyro
+  - fused

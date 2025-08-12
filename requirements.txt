@@ -1,0 +1,11 @@
+joblib~=1.5.1
+wandb~=0.21.1
+pyyaml~=6.0.2
+matplotlib~=3.10.3
+seaborn~=0.13.2
+pandas~=2.3.1
+scikit-learn~=1.7.0
+plotly~=6.2.0
+streamlit~=1.48.0
+knockknock~=0.1.8.1
+python-dotenv~=1.0.1
